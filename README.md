@@ -1,5 +1,7 @@
 # telescope-greek-letters
 
+WIP: this plugin does not currently work.
+
 Search greek letters using [telescope.nvim](https://github.com/nvim-telescope) and insert LaTeX code on selection.
 
 ## Requirements
