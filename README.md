@@ -12,13 +12,14 @@ Lazy
 
 ```lua
 {
-    'Rothbard-m/telescope-greek-letters.nvim'
-        config = function()
-        require('greek_letters_plugin').setup{
-            keymap = "<leader>fl"  -- Use "<leader>fl" as the keymap
-                end,
-                dependencies = { 'nvim-telescope/telescope.nvim' }
-        }
+  'Rothbard-m/telescope-greek-letters.nvim',
+  config = function()
+    require('greek_letters_plugin').setup{
+      keymap = "<leader>fl"  -- Use "<leader>fl" as the keymap
+    }
+  end,
+  dependencies = { 'nvim-telescope/telescope.nvim' }
+},
 ```
 
 ## Setup

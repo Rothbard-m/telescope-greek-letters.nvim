@@ -1,15 +1,19 @@
-local telescope = require('telescope')
-local actions = require('telescope.actions')
-local actions_state = require('telescope.actions.state')
-local entry_display = require('telescope.pickers.entry_display')
 
--- Define the list of Greek letters
 local greek_letters = {
     { label = 'alpha', code = '\\alpha' },
     { label = 'beta', code = '\\beta' },
     { label = 'gamma', code = '\\gamma' },
     -- Add more Greek letters as needed
 }
+
+local telescope_loaded, telescope = pcall(require, 'telescope')
+if not telescope_loaded then
+    error('Telescope not found. Make sure the Telescope plugin is installed and properly set up.')
+end
+
+local actions = require('telescope.actions')
+local actions_state = require('telescope.actions.state')
+local entry_display = require('telescope.pickers.entry_display')
 
 -- Define the Telescope picker
 local greek_picker = telescope.make_entry {
